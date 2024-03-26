@@ -3,8 +3,8 @@ from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 
 class Question(models.Model):
-    question_text = models.CharField(max_length=200)
-    answer_text = models.TextField()
+    English_text = models.CharField(max_length=200)
+    Morse_text = models.TextField()
 
     def __str__(self):
-        return self.question_text
+        return self.English_text

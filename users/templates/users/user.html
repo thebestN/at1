@@ -2,5 +2,11 @@
 {% block body %}
     <h1>Welcome, {{ request.user.first_name }}</h1>
     <p>Username: {{ request.user.username }}</p>
-    <a href="{% url 'eduprod:index' %}">Take the Quiz</a>
+    <form method="get" action="{% url 'eduprod:index' %}">
+        <select name="quiz_type">
+            <option value="M-E">Morse to English</option>
+            <option value="E-M">English to Morse</option>
+        </select>
+        <button type="submit">Take the Quiz</button>
+    </form>
 {% endblock %}

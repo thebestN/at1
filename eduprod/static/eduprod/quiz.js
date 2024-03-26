@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function displayQuestion() {
         if (currentQuestionIndex < questions.length) {
-            const question = questions[currentQuestionIndex].fields.question_text;
-            const answer = questions[currentQuestionIndex].fields.answer_text;
+            const question = questions[currentQuestionIndex].fields.English_text;
+            const answer = questions[currentQuestionIndex].fields.Morse_text;
             content.innerHTML = `<div class='question'>Question: ${question}</div><div class='answer' style='display: none;'>Answer: ${answer}</div>`;
             btn.textContent = "Reveal Answer";
         } else {
